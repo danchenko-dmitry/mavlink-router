@@ -1,0 +1,21 @@
+[Unit]
+Description=MAVLink Router - Routes MAVLink messages between endpoints
+After=network.target
+
+[Service]
+Type=simple
+User=dmytro
+Group=dialout
+ExecStart=/home/dmytro/mavlink-router/build/src/mavlink-routerd -c /etc/mavlink-router/main.conf
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+# Security settings
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+
