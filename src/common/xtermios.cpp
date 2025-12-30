@@ -30,8 +30,10 @@ int reset_uart(int fd)
         = {3, 28, 127, 21, 4, 0, 0, 0, 17, 19, 26, 0, 18, 15, 23, 22,
            0, 0,  0,   0,  0, 0, 0, 0, 0,  0,  0,  0, 0,  0,  0,  0};
 
-    static_assert(sizeof(default_cc) == sizeof(tc.c_cc),
-                  "Unknown termios struct with different size");
+    /* Workaround for GCC 15.2.0: use runtime check instead of static_assert */
+    if (sizeof(default_cc) != sizeof(tc.c_cc)) {
+        return -1; /* Unknown termios struct with different size */
+    }
 
     if (tcgetattr(fd, &tc) < 0) {
         return -1;
