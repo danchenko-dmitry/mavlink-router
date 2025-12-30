@@ -25,9 +25,10 @@ int reset_uart(int fd)
 {
     struct termios tc = {};
     /* See termios(3) */
+    /* Workaround for GCC 15.2.0 bug: use decimal instead of octal to avoid .base64 assembler error */
     const cc_t default_cc[]
-        = {03, 034, 0177, 025, 04, 0, 0, 0, 021, 023, 032, 0, 022, 017, 027, 026,
-           0,  0,   0,    0,   0,  0, 0, 0, 0,   0,   0,   0, 0,   0,   0,   0};
+        = {3, 28, 127, 21, 4, 0, 0, 0, 17, 19, 26, 0, 18, 15, 23, 22,
+           0, 0,  0,   0,  0, 0, 0, 0, 0,  0,  0,  0, 0,  0,  0,  0};
 
     static_assert(sizeof(default_cc) == sizeof(tc.c_cc),
                   "Unknown termios struct with different size");
