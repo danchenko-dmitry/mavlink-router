@@ -235,7 +235,15 @@ void ULog::_logging_data_process(mavlink_logging_data_t *msg)
 
     /* Waiting for ULog header? */
     if (_waiting_header) {
-        const uint8_t magic[] = ULOG_MAGIC;
+        /* Workaround for GCC 15.2.0: initialize array element by element to avoid .base64 assembler error */
+        uint8_t magic[7];
+        magic[0] = 0x55;
+        magic[1] = 0x4C;
+        magic[2] = 0x6F;
+        magic[3] = 0x67;
+        magic[4] = 0x01;
+        magic[5] = 0x12;
+        magic[6] = 0x35;
 
         if (msg->length < ULOG_HEADER_SIZE) {
             /* This should never happen */
