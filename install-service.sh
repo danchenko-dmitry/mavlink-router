@@ -71,16 +71,8 @@ if [ ! -d "$CONFIG_DIR" ]; then
 fi
 
 # Copy config file if it doesn't exist
-if [ ! -f "$CONFIG_FILE" ]; then
-    if [ -f "$SCRIPT_DIR/mavlink-router-rpi.conf" ]; then
-        cp "$SCRIPT_DIR/mavlink-router-rpi.conf" "$CONFIG_FILE"
-        echo "✓ Installed config file: $CONFIG_FILE"
-    else
-        echo "WARNING: Config file not found. Please create $CONFIG_FILE manually"
-    fi
-else
-    echo "✓ Config file already exists: $CONFIG_FILE"
-fi
+cp "$SCRIPT_DIR/mavlink-router-rpi.conf" "$CONFIG_FILE"
+echo "✓ Installed config file: $CONFIG_FILE"
 
 # Get the actual user (not root)
 ACTUAL_USER=$(logname 2>/dev/null || echo "${SUDO_USER:-$USER}")
