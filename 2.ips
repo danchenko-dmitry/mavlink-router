@@ -1,0 +1,22 @@
+
+17 packets received by filter, 0 packets dropped by kernel
+192.168.88.10	c2:cd:e4:e7:3d:ca	(Unknown: locally administered)
+192.168.88.11	4c:44:5b:2e:19:bd	Intel Corporate
+192.168.88.11	4c:44:5b:2e:19:bd	Intel Corporate (DUP: 10)
+192.168.88.11	4c:44:5b:2e:19:bd	Intel Corporate (DUP: 11)
+192.168.88.11	4c:44:5b:2e:19:bd	Intel Corporate (DUP: 2)
+192.168.88.11	4c:44:5b:2e:19:bd	Intel Corporate (DUP: 3)
+192.168.88.11	4c:44:5b:2e:19:bd	Intel Corporate (DUP: 4)
+192.168.88.11	4c:44:5b:2e:19:bd	Intel Corporate (DUP: 5)
+192.168.88.11	4c:44:5b:2e:19:bd	Intel Corporate (DUP: 6)
+192.168.88.11	4c:44:5b:2e:19:bd	Intel Corporate (DUP: 7)
+192.168.88.11	4c:44:5b:2e:19:bd	Intel Corporate (DUP: 8)
+192.168.88.11	4c:44:5b:2e:19:bd	Intel Corporate (DUP: 9)
+192.168.88.1	e4:8d:8c:ab:d9:11	Routerboard.com
+192.168.88.254	28:6c:07:9b:d3:cd	XIAOMI Electronics,CO.,LTD
+192.168.88.40	f8:0d:ac:22:32:78	HP Inc.
+192.168.88.45	00:12:43:19:f5:12	Cisco Systems, Inc
+192.168.88.49	00:12:43:19:f5:12	Cisco Systems, Inc
+Ending arp-scan 1.10.0: 256 hosts scanned in 1.882 seconds (136.03 hosts/sec). 7 responded
+Interface: wlp0s20f3, type: EN10MB, MAC: 30:e3:a4:e2:8f:79, IPv4: 192.168.88.26
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)

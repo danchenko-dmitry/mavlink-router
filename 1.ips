@@ -1,0 +1,7 @@
+
+192.168.88.1	e4:8d:8c:ab:d9:11	Routerboard.com
+192.168.88.40	f8:0d:ac:22:32:78	HP Inc.
+2 packets received by filter, 0 packets dropped by kernel
+Ending arp-scan 1.10.0: 256 hosts scanned in 1.885 seconds (135.81 hosts/sec). 2 responded
+Interface: wlp0s20f3, type: EN10MB, MAC: 30:e3:a4:e2:8f:79, IPv4: 192.168.88.26
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
